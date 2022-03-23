@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Raleway', sans-serif;
+  -webkit-overflow-scrolling: touch;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  font-feature-settings: 'pnum' on, 'lnum' on;
+  @apply text-dark;
+}
+
+main,
+aside {
+  min-height: calc(100vh - 70px);
+}
+
+main {
+  width: calc(100% - 285px);
+  margin-left: 285px;
+}
+@media (min-width: 1280px) {
+  main {
+    width: calc(100% - 320px);
+    @apply ml-80;
+  }
+}
+
+h1,
+h2 {
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 32px;
+  line-height: 38px;
+}
+
+h2 {
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.DayPickerInput {
+  width: 100%;
+}
+
+.DayPicker-Day.DayPicker-Day--today {
+  color: #1dc255;
+}
+
+.DayPicker:not(.DayPicker--interactionDisabled)
+  .DayPicker-Day:not(.DayPicker-Day--disabled):not(.DayPicker-Day--selected):not(.DayPicker-Day--outside):hover {
+  background-color: #e3ffed;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+input {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}

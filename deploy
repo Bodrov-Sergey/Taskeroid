@@ -1,0 +1,2 @@
+#!/bin/bash
+ssh -p14722 root@s3.web-creator.ru 'cd ../smartfact-apps/smartfact-cabinet && git reset --hard && git pull && yarn && yarn build && pm2 restart smartfact-cabinet --update-env'

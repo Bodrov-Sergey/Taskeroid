@@ -1,0 +1,26 @@
+parser: '@typescript-eslint/parser'
+extends:
+  - 'eslint:recommended'
+  - 'plugin:@typescript-eslint/recommended'
+  - 'plugin:cypress/recommended'
+  - plugin:prettier/recommended
+plugins:
+  - cypress
+env:
+  browser: true
+  node: true
+  cypress/globals: true
+rules:
+  no-console: error
+  prettier/prettier: [error, { endOfLine: auto }]
+  '@typescript-eslint/explicit-module-boundary-types': off
+  '@typescript-eslint/no-non-null-assertion': off
+overrides:
+  - rules:
+      '@typescript-eslint/no-var-requires': off
+    files:
+      - '*.js'
+  - rules:
+      '@typescript-eslint/no-namespace': off
+    files:
+      - 'cypress/support/index.ts'
