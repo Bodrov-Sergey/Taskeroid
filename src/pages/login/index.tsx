@@ -24,7 +24,7 @@ const Login: FC = () => {
   const history = useHistory();
 
   if (user && url == '/login') {
-    history.replace('/main');
+    history.replace('/main/my');
   }
 
   const isLoading = useStore(loginFx.pending);

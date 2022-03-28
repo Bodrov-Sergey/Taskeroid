@@ -10,8 +10,6 @@ export * from './Checkbox';
 export * from './HintedOnHover';
 export * from './Radio';
 export * from './DatePicker';
-export * from './Comment';
-export * from './Notification';
 export * from './Dropzone';
 export * from './Tab';
 export * from './ModalWindow';

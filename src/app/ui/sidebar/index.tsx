@@ -18,7 +18,7 @@ export const Sidebar: FC = () => {
   const navItems = [
     {
       icon: <Sticker className="w-5 h-5 stroke-current mr-3" />,
-      href: '/main',
+      href: '/main/my',
       title: 'Входящие',
       exact: false,
     },

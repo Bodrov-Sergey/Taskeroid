@@ -6,7 +6,7 @@ const Index: FC = () => {
   const history = useHistory();
 
   if (pathname == '/') {
-    history.replace('/main');
+    history.replace('/main/my');
   }
 
   return <></>;

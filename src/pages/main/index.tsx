@@ -11,8 +11,7 @@ import { Tab } from '@shared/ui';
 import { ReactComponent as Arrow } from '@shared/assets/arrow-right.svg';
 
 const Main: FC = () => {
-  const { path, url } = useRouteMatch();
-  const { pathname } = useLocation();
+  const { url } = useRouteMatch();
 
   return (
     <>
@@ -20,12 +19,28 @@ const Main: FC = () => {
         <div className="flex justify-between items-center mb-5">
           <h1>Входящие</h1>
         </div>
+        {/* unwatched/completed/watched/my/not_my/accepted/not_accepted */}
         <div className="flex items-center flex-wrap mb-2">
-          <Tab className="mb-4 ml-[-1px]" to={`${url}/analytics`}>
-            Аналитика
+          <Tab className="mb-4 ml-[-1px]" to={`${url}/unwatched`}>
+            Непросмотренные
           </Tab>
-          <Tab className="mb-4 ml-[-1px]" to={`${url}/reports`}>
-            Отчёты
+          <Tab className="mb-4 ml-[-1px]" to={`${url}/completed`}>
+            Завершенные
+          </Tab>
+          <Tab className="mb-4 ml-[-1px]" to={`${url}/watched`}>
+            Просмотренные
+          </Tab>
+          <Tab className="mb-4 ml-[-1px]" to={`${url}/my`}>
+            Я ответственный
+          </Tab>
+          <Tab className="mb-4 ml-[-1px]" to={`${url}/not_my`}>
+            Не я ответственный
+          </Tab>
+          <Tab className="mb-4 ml-[-1px]" to={`${url}/accepted`}>
+            Принятые
+          </Tab>
+          <Tab className="mb-4 ml-[-1px]" to={`${url}/not_accepted`}>
+            Непринятые
           </Tab>
         </div>
       </>

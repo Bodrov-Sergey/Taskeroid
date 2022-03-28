@@ -15,20 +15,26 @@ const Documents: FC = () => {
           <h1>Задачи</h1>
         </div>
         <div className="flex items-center flex-wrap mb-2">
-          <Tab className="mb-4 -ml-px" to={`${url}/contractors`}>
-            Договоры с контрагентами
+          <Tab className="mb-4 ml-[-1px]" to={`${url}/unwatched`}>
+            Непросмотренные
           </Tab>
-          <Tab className="mb-4 -ml-px" to={`${url}/legal`}>
-            Юридические документы
+          <Tab className="mb-4 ml-[-1px]" to={`${url}/completed`}>
+            Завершенные
           </Tab>
-          <Tab className="mb-4 -ml-px" to={`${url}/finance`}>
-            Финансовые документы
+          <Tab className="mb-4 ml-[-1px]" to={`${url}/watched`}>
+            Просмотренные
           </Tab>
-          <Tab className="mb-4 -ml-px" to={`${url}/other`}>
-            Прочие документы
+          <Tab className="mb-4 ml-[-1px]" to={`${url}/my`}>
+            Я ответственный
           </Tab>
-          <Tab className="mb-4 -ml-px" to={`${url}/smartfact`}>
-            Документы от Smartfact
+          <Tab className="mb-4 ml-[-1px]" to={`${url}/not_my`}>
+            Не я ответственный
+          </Tab>
+          <Tab className="mb-4 ml-[-1px]" to={`${url}/accepted`}>
+            Принятые
+          </Tab>
+          <Tab className="mb-4 ml-[-1px]" to={`${url}/not_accepted`}>
+            Непринятые
           </Tab>
         </div>
       </>
