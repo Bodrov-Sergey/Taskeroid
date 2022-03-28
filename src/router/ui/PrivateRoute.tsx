@@ -3,12 +3,7 @@ import { NavLink } from 'react-router-dom';
 import { toast } from 'react-toastify';
 
 import { useStore } from 'effector-react';
-import {
-  $auth,
-  $toastIds,
-  setInfoToastIdFx,
-  setDocsToastIdFx,
-} from '@shared/model';
+import { $auth } from '@shared/model';
 import { Redirect, Route, RouteProps } from 'react-router';
 import { Urls } from '@router';
 
